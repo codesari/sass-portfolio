@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Variable Declaration
+$bodyBgColor: pink;
+$bodyFontSize: 1.2rem;
+$bodyColor: white;
+$bodyFontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$headerBgColor: #30a7c3;
+$bannerBgColor: hotpink;
+$myBorder: 2px solid green;
+
+body {
+  font-family: $bodyFontFamily;
+  background-color: $bodyBgColor;
+  font-size: $bodyFontSize;
+  color: $bodyColor;
+}
+
+header {
+  background-color: $headerBgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  img {
+    width: 80px;
+    border: $myBorder;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+      &:hover {
+        text-decoration: underline;
+      }
+      //   hover'ı a ya koysak da olur..
+
+      a {
+        text-decoration: none;
+        color: $bodyColor;
+      }
+    }
+  }
+}
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: $myBorder;
+  padding: 1rem;
+  line-height: 2rem;
+  background-color: $bannerBgColor;
+  aside {
+    button {
+      padding: 0.5rem;
+      margin-top: 1rem;
+      margin-right: 0.5rem;
+      background-color: $headerBgColor;
+      border: none;
+      border-radius: 5px;
+      &:hover {
+        background-color: $bodyBgColor;
+        cursor: pointer;
+      }
+    }
+  }
+  img {
+    width: 30%;
+    // for responsive
+    min-width: 250px;
+    max-width: 480px;
+  }
+}
+// ! CSS DE FONKSİYON OLUŞTURMA (@MİXİN)
+@mixin myCards($bgColor, $fontColor) {
+}
+.cards {
+  .card1 {
+  }
+  .card2 {
+  }
+  .card3 {
+  }
+  .card4 {
+  }
+}
