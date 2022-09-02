@@ -80,15 +80,55 @@ header {
   }
 }
 // ! CSS DE FONKSİYON OLUŞTURMA (@MİXİN)
+//! declare -> fonskiyonu belirtme
+//! invoke -> fonksiyonu çağırma
+//! fonksiyonu,kullanacağımız yerde @include ile çağırıyoruz
+
 @mixin myCards($bgColor, $fontColor) {
+  // burdaki değerleri parametrik de yapabiliriz veya kendimiz de verebiliriz
+  background-color: $bgColor;
+  // parametrik
+  width: 25%;
+  height: 15rem;
+  // parametrik değil,biz belirledik
+  color: $fontColor;
+  border: $myBorder;
+  border-radius: 5px;
 }
 .cards {
+  display: flex;
+  //   flex-direction : row olduğu için yan yana dizilirler
+  gap: 0.7rem;
+  margin: 0.5rem;
   .card1 {
+    @include myCards(green, white);
   }
   .card2 {
+    @include myCards(red, white);
   }
   .card3 {
+    @include myCards(yellow, black);
   }
   .card4 {
+    @include myCards(black, yellow);
+  }
+}
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  //   gap'ler taşıyıcıya verilir.
+
+  .article1 {
+    background-color: grey;
+    border: $myBorder;
+    border-radius: 5px;
+    width: 50%;
+    height: 10rem;
+  }
+  .article2 {
+    @extend .article1;
+    background-color: $bannerBgColor;
   }
 }
