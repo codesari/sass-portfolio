@@ -132,3 +132,25 @@ header {
     background-color: $bannerBgColor;
   }
 }
+//! sass de dizi de tanımlayabiliyoruz.ilgili yerden indisi çekrek kullanabiliriz
+
+footer {
+  // class ları tek tek oluşturmak yerine döngü ile oluşturacağız
+  //  to da 5 dahil olmaz.through kullanırsak 5 dahil olur
+
+  .boxes {
+    display: flex;
+    height: 10rem;
+    $textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
+
+    @for $i from 1 through 5 {
+      .box#{$i} {
+        width: 20%;
+        background-color: lighten(black, $i * 15);
+        font-size: $i * 0.7rem;
+        // ! Diziden indis okuma..
+        color: nth($textColor, $i);
+      }
+    }
+  }
+}
