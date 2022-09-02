@@ -120,6 +120,9 @@ header ul li a {
   background-color: hotpink;
 }
 
+footer p {
+  background-color: red;
+}
 footer .boxes {
   display: flex;
   height: 10rem;

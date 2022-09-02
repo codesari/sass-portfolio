@@ -138,6 +138,17 @@ footer {
   // class ları tek tek oluşturmak yerine döngü ile oluşturacağız
   //  to da 5 dahil olmaz.through kullanırsak 5 dahil olur
 
+  // ! İF -ELSE
+  $index: 2;
+  p {
+    @if $index==1 {
+      background-color: green;
+    } @else if $index==2 {
+      background-color: red;
+    } @else {
+      background-color: cyan;
+    }
+  }
   .boxes {
     display: flex;
     height: 10rem;
