@@ -1,3 +1,3 @@
 ## Demo
 
-![Sass Portfolio](sass.gif)
+![Sass Portfolio](sass-portfolio.gif)
